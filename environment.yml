@@ -1,0 +1,14 @@
+name: hand_sign_recognition
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - scikit-learn
+  - opencv
+  - pytorch
+  - torchvision
+  - pip
+  - pip:
+      - mediapipe
+      - matplotlib

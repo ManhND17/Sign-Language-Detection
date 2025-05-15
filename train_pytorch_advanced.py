@@ -51,8 +51,6 @@ if __name__ == "__main__":
             if file.endswith(".npy"):
                 file_path = os.path.join(label_path, file)
                 raw = np.load(file_path)
-                # Nếu bạn muốn chuẩn hóa lại lúc này, uncomment:
-                # raw = normalize_landmarks(raw)
                 X.append(raw)
                 y.append(label_folder)
 

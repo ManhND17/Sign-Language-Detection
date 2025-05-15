@@ -30,7 +30,7 @@ for folder in os.listdir(data_root):
         image_path = os.path.join(class_dir, file)
         image = cv2.imread(image_path)
         if image is None:
-            print("❌ Không đọc được ảnh:", image_path)
+            print("Không đọc được ảnh:", image_path)
             continue
 
         image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -46,6 +46,6 @@ for folder in os.listdir(data_root):
             filename = f"{label}_{os.path.splitext(file)[0]}.npy"
             path_save = os.path.join(label_dir, filename)  # Lưu trong thư mục con
             np.save(path_save, norm)
-            print("✔️ Đã lưu:", path_save)
+            print("Đã lưu:", path_save)
         else:
-            print("⚠️ Không phát hiện tay:", image_path)
+            print("Không phát hiện tay:", image_path)

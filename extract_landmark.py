@@ -7,7 +7,7 @@ from utils import normalize_landmarks
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(static_image_mode=True)
 
-data_root = "images"
+data_root = "D://archive/American"
 save_dir = "data"
 os.makedirs(save_dir, exist_ok=True)
 
@@ -44,7 +44,7 @@ for folder in os.listdir(data_root):
             norm = normalize_landmarks(landmarks)
 
             filename = f"{label}_{os.path.splitext(file)[0]}.npy"
-            path_save = os.path.join(label_dir, filename)  # Lưu trong thư mục con
+            path_save = os.path.join(label_dir, filename)
             np.save(path_save, norm)
             print("Đã lưu:", path_save)
         else:

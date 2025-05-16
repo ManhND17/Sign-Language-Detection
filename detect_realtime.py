@@ -50,11 +50,11 @@ while True:
 
             # Chọn màu theo độ tin cậy
             if confidence >= 0.7:
-                color = (0, 255, 0)     # Xanh lá
+                color = (0, 255, 0)     
             elif confidence >= 0.4:
-                color = (0, 255, 255)   # Vàng
+                color = (0, 255, 255) 
             else:
-                color = (0, 0, 255)     # Đỏ
+                color = (0, 0, 255) 
 
             # Hiển thị label + confidence
             cv2.putText(frame, f"{label} ({confidence:.2f})", (10, 50),
